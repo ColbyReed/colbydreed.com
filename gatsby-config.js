@@ -30,16 +30,19 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,{
-    options: {
-      headers: {
-        '/*': [
-          "X-Frame-Options: ALLOW-FROM https://colbyreed.com/mario/mario.html",
-        ]
+    `gatsby-plugin-netlify`,
+      {
+        resolve: 'gatsby-plugin-netlify',
+        options: {
+          headers: {
+            '/*': [
+              "Content-Security-Policy: frame-ancestors 'self' https://*.storyblok.com/",
+              "X-Frame-Options: ALLOW-FROM https://app.storyblok.com/",
+            ]
+          },
+          mergeSecurityHeaders: true,
+        }
       },
-      mergeSecurityHeaders: false,
-    }
-  }
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     {
