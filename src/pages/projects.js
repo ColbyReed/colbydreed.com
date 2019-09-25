@@ -7,9 +7,14 @@ import SEO from "../components/seo"
 const Projects = () => (
   <Layout>
     <SEO title="Projects" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <div align="center">
+      <h1>Projects</h1>
+      <p>Here is a clickable list of recent projects I have done.</p>
+      <ul>
+        <a href="/mario"><li>Mario Javascript Game Demo</li></a>
+        <a href="https://github.com/ColbyReed/basic_calculator_android"><li>Basic Calculator App for Android</li></a>
+      </ul>
+    </div>
   </Layout>
 )
 

@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -34,14 +35,14 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-dark"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-            "Logo"
+            <Link to="/" className="navbar-item" title="Home">
+            Home
             </Link>
             {/* Hamburger menu */}
             <div
@@ -65,22 +66,32 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/projects">
                 Projects
               </Link>
-              <Link className="navbar-item" to="/blog">
+              {/* <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
-              </Link>
+              </Link> */}
             </div>
             <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                href="https://github.com/ColbyReed"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="icon">
-                "Github"
+                <FaGithub />
+                </span>
+              </a>
+              <a
+                className="navbar-item"
+                href="https://www.linkedin.com/in/colby-reed/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">
+                <FaLinkedin />
                 </span>
               </a>
             </div>
