@@ -30,7 +30,16 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify`,{
+    options: {
+      headers: {
+        '/*': [
+          "X-Frame-Options: ALLOW-FROM https://colbyreed.com/mario/mario.html",
+        ]
+      },
+      mergeSecurityHeaders: false,
+    }
+  }
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     {
