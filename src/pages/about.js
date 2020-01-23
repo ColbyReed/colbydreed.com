@@ -22,7 +22,7 @@ const IndexPage = props => (
       <div style={{float:"left|center", margin:"20px", width:"90%"}}>
         <p style={{textIndent:"40px"}}>My name is Colby Reed and I am a Senior studying Computer Science at the University of Arkansas.
         I am currently working at J.B. Hunt as an Application Development Intern.</p>
-        <p>I have been introduced and have gained experience in tools such as:</p>
+        <p>I have experience in tools such as:</p>
         <ul style={{listStyle:"disc", align:"center"}}>
           <li>Docker</li>
           <li>NGINX</li>
